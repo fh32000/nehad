@@ -8,6 +8,7 @@ use App\Livewire\Auth\Passwords\Email;
 use App\Livewire\Auth\Passwords\Reset;
 use App\Livewire\Auth\Register;
 use App\Livewire\Auth\Verify;
+use App\Livewire\IndexFacilities;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -53,4 +54,7 @@ Route::middleware('auth')->group(function () {
 
     Route::post('logout', LogoutController::class)
         ->name('logout');
+        Route::get('/facilities', IndexFacilities::class)->name('facilities.index');
+
+
 });
