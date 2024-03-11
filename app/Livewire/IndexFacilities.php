@@ -2,19 +2,13 @@
 
 namespace App\Livewire;
 
-use Livewire\Component;
 
 use App\Models\Facility;
 use Illuminate\Database\Eloquent\Builder;
-use Livewire\WithPagination;
-
+use Livewire\Volt\Component;
+use App\Models\User; 
 class IndexFacilities extends Component
 {
-    public function render()
-    {
-        return view('livewire.index-facilities');
-
-    }
     public ?int $quantity = 10;
  
     public ?string $search = null;
